@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GitHub</string>
+
+    <string name="default_error_message">Ops! Ocorreu um erro inesperado. Tente novamente.</string>
+    <string name="connection_error_message">Ops! Ocorreu um erro inesperado.\nVerifique sua conexão e tente novamente.</string>
+    <string name="default_error_empty_items">Ops! Não existem registros.</string>
+</resources>

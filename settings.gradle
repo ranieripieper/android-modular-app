@@ -1,0 +1,7 @@
+include ':features:gitrepository'
+include ':features:pullrequest'
+include ':common:features_navigation'
+include ':common:ui'
+include ':common:core'
+include ':app'
+rootProject.name = "GitHub"

@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GitHub" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+
+        <item name="android:textViewStyle">@style/Theme.GitHub.TextView</item>
+    </style>
+
+    <style name="Theme.GitHub.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.GitHub.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.GitHub.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.GitHub.TextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textDefault</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="Theme.GitHub.TextView.Title" parent="Theme.GitHub.TextView">
+        <item name="android:textColor">@color/textTitle</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+    <style name="Theme.GitHub.TextView.Highlight" parent="Theme.GitHub.TextView">
+        <item name="android:textColor">@color/textHighlight</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="Theme.GitHub.TextView.Title.Small" parent="Theme.GitHub.TextView.Title">
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="Theme.GitHub.TextView.Medium.Bold" parent="Theme.GitHub.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="Theme.GitHub.TextView.Medium" parent="Theme.GitHub.TextView">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+</resources>

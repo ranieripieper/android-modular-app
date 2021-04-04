@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_margin_recycler_item"
+    android:layout_marginEnd="@dimen/default_margin_recycler_item"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingBottom="10dp"
+    app:cardCornerRadius="@dimen/default_card_corner"
+    app:cardUseCompatPadding="true"
+    app:elevation="@dimen/default_card_elevation"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_horizontal_margin"
+        android:paddingStart="@dimen/default_margin"
+        android:paddingEnd="@dimen/default_margin">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideInfoUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <ImageView
+            android:id="@+id/ivUser"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideInfoUser"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_person_placeholder" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUsername"
+            style="@style/Theme.GitHub.TextView.Title.Small"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideInfoUser"
+            app:layout_constraintTop_toBottomOf="@+id/ivUser"
+            tools:text="username" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRepoName"
+            style="@style/Theme.GitHub.TextView.Title"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="@+id/guideInfoUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="nome do repositório" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRepoDescription"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:ellipsize="end"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="@+id/guideInfoUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
+            tools:text="descrição do repositório" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFork"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_gitfork"
+            android:tint="@color/textHighlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFork"
+            style="@style/Theme.GitHub.TextView.Highlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:src="@drawable/ic_gitfork"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivFork"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoDescription"
+            tools:text="500" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivStars"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_star"
+            android:tint="@color/textHighlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvFork"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStars"
+            style="@style/Theme.GitHub.TextView.Highlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:src="@drawable/ic_gitfork"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivStars"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoDescription"
+            tools:text="500" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
