@@ -1,7 +1,7 @@
 package me.ranieripieper.android.github.pullrequest.viewmodel
 
 data class PullRequestPresentation(
-    val openedText: String,
+    val openText: String,
     val closedText: String,
     val items: List<PullRequestItem>
 )

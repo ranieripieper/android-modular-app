@@ -22,21 +22,21 @@ class PullRequestConverter @Inject internal constructor(private val resourceMana
         }
 
         val items = mutableListOf<PullRequestItem>()
-        var opened = 0
+        var open = 0
         var closed = 0
         response.forEach {
             items.add(convertPullRequest(it))
             when (it.state) {
-                PullRequestStateEnum.OPEN -> opened++
+                PullRequestStateEnum.OPEN -> open++
                 PullRequestStateEnum.CLOSED -> closed++
             }
         }
 
         return ViewState.Content(
             PullRequestPresentation(
-                openedText = resourceManager.getString(
-                    me.ranieripieper.android.github.pullrequest.R.string.pull_request_opened,
-                    opened
+                openText = resourceManager.getString(
+                    me.ranieripieper.android.github.pullrequest.R.string.pull_request_open,
+                    open
                 ),
                 closedText = resourceManager.getString(
                     me.ranieripieper.android.github.pullrequest.R.string.pull_request_closed,

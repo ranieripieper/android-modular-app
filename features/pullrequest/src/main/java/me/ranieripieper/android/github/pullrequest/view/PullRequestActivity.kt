@@ -36,7 +36,7 @@ class PullRequestActivity : BaseActivity<PullRequestViewModel, ActivityPullReque
             is ViewState.Content -> {
                 pullRequestAdapter.addItems(viewState.value.items)
                 binding.apply {
-                    tvOpen.text = viewState.value.openedText
+                    tvOpen.text = viewState.value.openText
                     tvClose.text = viewState.value.closedText
                     loadingLayout.root.visibility = View.GONE
                     layoutHeader.visibility = View.VISIBLE

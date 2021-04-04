@@ -33,7 +33,7 @@ Como cada feature só possui uma tela, foi criado uma activity por feature. Para
 - `:app` -> Módulo principal do App. Possui a Splash que irá direcionar para o primeiro fluxo. Neste caso, a feature "gitRepository"
 - `:common:core` -> Módulo core do app que contém as classes "bases", bem como configurações do dagger para o retrofit e ViewModel
 - `:common:ui` -> Módulo que possui o "design system" do app. Cores, estilos, componentes de view...
-- :`common:features-navigation` -> Módulo responsável por iniciar o fluxo dentro de uma feature.
+- :`common:features-navigation` -> Módulo responsável por iniciar o fluxo de navegação de uma feature.
 - `:features:gitRepository` -> feature que lista os repositórios mais populares de Java
 - `:features:pullrequest` -> feature que lista os pull requests de determinado repositório
 

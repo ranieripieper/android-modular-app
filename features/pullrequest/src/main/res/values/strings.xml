@@ -1,6 +1,6 @@
 <resources>
     <string name="pull_requqest_toolbar_title">Pull Requests - %s</string>
     <string name="pull_request_closed">%d closed</string>
-    <string name="pull_request_opened">%d opened</string>
+    <string name="pull_request_open">%d open</string>
     <string name="text_separator">/</string>
 </resources>
